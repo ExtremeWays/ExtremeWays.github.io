@@ -96,6 +96,66 @@ var _hmt = _hmt || [];
     <div class="outer">
       <section id="main">
   
+    <article id="post-ssh-密钥登陆" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/08/ssh-密钥登陆/" class="article-date">
+  <time datetime="2016-01-07T17:14:36.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/08/ssh-密钥登陆/">ssh 密钥登陆</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="ssh__u5BC6_u94A5_u767B_u9646"><a href="#ssh__u5BC6_u94A5_u767B_u9646" class="headerlink" title="ssh 密钥登陆"></a>ssh 密钥登陆</h1><p>标签（空格分隔）： ssh 密钥  linux</p>
+<hr>
+<h2 id="1-_u521B_u5EFA_u5BC6_u94A5_u6587_u4EF6"><a href="#1-_u521B_u5EFA_u5BC6_u94A5_u6587_u4EF6" class="headerlink" title="1.创建密钥文件"></a>1.创建密钥文件</h2><hr>
+<p>在终端中输入以下命令，会在~/.ssh/目录下生成id_rsa_work 和 id_rsa_work.pub<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C  &#39;shenhaili1219@sina.com&#39; -f ~/.ssh/id_rsa_work</span><br></pre></td></tr></table></figure></p>
+<p>-t 指定密钥类型，默认rsa<br>-C 设置注释，默认当前linux用户名<br>-f 设置密钥文件名，默认生成id_rsa 和 id_rsa.pub</p>
+<blockquote>
+<p>由于以后可能会需要建立多个密钥最好指定密钥名</p>
+</blockquote>
+<hr>
+<h2 id="2-_u5C06_u516C_u94A5_u914D_u7F6E_u5230ssh_u670D_u52A1_u5668"><a href="#2-_u5C06_u516C_u94A5_u914D_u7F6E_u5230ssh_u670D_u52A1_u5668" class="headerlink" title="2.将公钥配置到ssh服务器"></a>2.将公钥配置到ssh服务器</h2><hr>
+
+      
+      
+
+
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://www.abckeep.com/2016/01/08/ssh-密钥登陆/" data-id="cij4kjpar00011eqzw2vwyu25" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://www.abckeep.com/2016/01/08/ssh-密钥登陆/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-linux/">ssh linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/07/hello-world/" class="article-date">
@@ -138,7 +198,7 @@ var _hmt = _hmt || [];
     
     <footer class="article-footer">
       
-        <a data-url="http://www.abckeep.com/2016/01/07/hello-world/" data-id="cij35blmp0000xxqzb0rx5gpl" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://www.abckeep.com/2016/01/07/hello-world/" data-id="cij4kjp9y00001eqzcyz7pjh7" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -171,6 +231,13 @@ var _hmt = _hmt || [];
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ssh-linux/" style="font-size: 10px;">ssh linux</a>
+    </div>
+  </div>
+
   
     
   
@@ -178,7 +245,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">2016年 01月</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">2016年 01月</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
