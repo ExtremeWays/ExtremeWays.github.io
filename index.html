@@ -4,19 +4,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>沈海立</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="沈海立">
 <meta property="og:url" content="http://abckeep.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="沈海立">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="沈海立">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="沈海立" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,8 +34,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">沈海立</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">在心为志，出口为言</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -69,12 +73,16 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/04/08/hello-world/" class="article-date">
-  <time datetime="2016-04-08T17:15:34.954Z" itemprop="datePublished">2016-04-08</time>
+    <a href="/2016/05/19/hexo/" class="article-date">
+  <time datetime="2016-05-19T14:03:18.000Z" itemprop="datePublished">2016-05-19</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -83,7 +91,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/08/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/05/19/hexo/">hexo搭建博客</a>
     </h1>
   
 
@@ -91,25 +99,664 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为什么要用hexo，它是个啥？"><span class="toc-number">1.</span> <span class="toc-text">1.为什么要用hexo，它是个啥？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-使用hexo"><span class="toc-number">2.</span> <span class="toc-text">2.使用hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装前准备"><span class="toc-number">2.1.</span> <span class="toc-text">1.安装前准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-安装node-js"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.安装node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-安装git"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.安装git</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装hexo"><span class="toc-number">2.2.</span> <span class="toc-text">2.安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-换主题"><span class="toc-number">2.3.</span> <span class="toc-text">3.换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-安装插件"><span class="toc-number">2.4.</span> <span class="toc-text">4.安装插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-多说评论"><span class="toc-number">2.4.1.</span> <span class="toc-text">4.1.多说评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-百度统计"><span class="toc-number">2.4.2.</span> <span class="toc-text">4.2.百度统计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-RSS订阅"><span class="toc-number">2.4.3.</span> <span class="toc-text">4.3. RSS订阅</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-百度sitemap"><span class="toc-number">2.4.4.</span> <span class="toc-text">4.3. 百度sitemap</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-配置"><span class="toc-number">2.5.</span> <span class="toc-text">5.配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-添加文章目录"><span class="toc-number">2.5.1.</span> <span class="toc-text">5.1 添加文章目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-文章配置"><span class="toc-number">2.5.2.</span> <span class="toc-text">5.2 文章配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-hexo常用操作"><span class="toc-number">2.6.</span> <span class="toc-text">6. hexo常用操作</span></a></li></ol></li></ol>
+</div>
+
+
+        <h2 id="1-为什么要用hexo，它是个啥？"><a href="#1-为什么要用hexo，它是个啥？" class="headerlink" title="1.为什么要用hexo，它是个啥？"></a>1.为什么要用hexo，它是个啥？</h2><p>   这主要源于很多人想构建静态网站，比如我就是通过GitHub Pages 来搭建免费的博客，而GitHub Pages只能放静态网站，这时就需要一个博客发布工具（比如：jekyll,hexo等）自动生成静态页面效果，而我们只需要用markdown等语法描述内容其他复杂的页面效果就交给hexo去做。</p>
+<p>   <strong>hexo</strong>是由Node.js驱动的一款快速、简单且功能强大的博客框架。<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">官方文档</a></p>
+<h2 id="2-使用hexo"><a href="#2-使用hexo" class="headerlink" title="2.使用hexo"></a>2.使用hexo</h2><h3 id="1-安装前准备"><a href="#1-安装前准备" class="headerlink" title="1.安装前准备"></a>1.安装前准备</h3><h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><p>安装node的版本管理工具nvm<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
+<p>nvm安装完成后,重启终端执行以下命令安装node.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 4</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#安装</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line">#在要使用hexo对应的目录初始化</span><br><span class="line">hexo init</span><br><span class="line"></span><br><span class="line">#清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">#生成静态文件</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">#启动服务器  -p, --port 重设端口 默认4000  启动后就可以访问http://localhost:4000/</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="3-换主题"><a href="#3-换主题" class="headerlink" title="3.换主题"></a>3.换主题</h3><p>你可以挑自己喜欢风格的<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">主题</a>，这里我就挑了对官方主题增强版的<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">Landscape Plus</a>，点开链接已经有详细的配置教程了</p>
+<h3 id="4-安装插件"><a href="#4-安装插件" class="headerlink" title="4.安装插件"></a>4.安装插件</h3><p> 我用的主题Landscape Plus已经帮我们集成蛮多插件模块，下面说下具体配置：</p>
+<h4 id="4-1-多说评论"><a href="#4-1-多说评论" class="headerlink" title="4.1.多说评论"></a>4.1.多说评论</h4><ul>
+<li><a href="http://duoshuo.com/" target="_blank" rel="external">登陆多说</a> </li>
+<li><a href="http://duoshuo.com/create-site/" target="_blank" rel="external">创建站点</a> ，这步骤填的域名值下面duoshuo_shortname会用到</li>
+</ul>
+<p>将主题目录下landscape-plus_config.yml做如下修改：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_shortname: 上面配置的域名值</span><br></pre></td></tr></table></figure></p>
+<p>修改themes\landscape\layout_partial\article.ejs模板<br>把<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span> &amp;&amp; <span class="attr">config.duoshuo_shortname</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-thread"</span> <span class="attr">data-thread-key</span>=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attr">data-title</span>=<span class="string">"&lt;%= post.title %&gt;"</span> <span class="attr">data-url</span>=<span class="string">"&lt;%= page.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span><br><span class="line">    var duoshuoQuery = &#123;short_name:'<span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.duoshuo_shortname</span> %&gt;</span>'&#125;;</span><br><span class="line">      (function() &#123;</span><br><span class="line">        var ds = document.createElement('script');</span><br><span class="line">        ds.type = 'text/javascript';ds.async = true;</span><br><span class="line">        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';</span><br><span class="line">        ds.charset = 'UTF-8';</span><br><span class="line">        (document.getElementsByTagName('head')[0] </span><br><span class="line">         || document.getElementsByTagName('body')[0]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>注意hexo目录下的_config.yml修改下面的值：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: 网站域名地址</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-2-百度统计"><a href="#4-2-百度统计" class="headerlink" title="4.2.百度统计"></a>4.2.百度统计</h4><p>百度统计注册账号，复制统计代码（请复制自己的代码，直接复制下面没用！）<br>添加到themes\landscape\layout_partial\footer.ejs里面<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span><br><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">  var hm = document.createElement("script");</span><br><span class="line">  hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxx";</span><br><span class="line">  var s = document.getElementsByTagName("script")[0]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="4-3-RSS订阅"><a href="#4-3-RSS订阅" class="headerlink" title="4.3. RSS订阅"></a>4.3. RSS订阅</h4><p>输入下面命令安装插件就好：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-3-百度sitemap"><a href="#4-3-百度sitemap" class="headerlink" title="4.3. 百度sitemap"></a>4.3. 百度sitemap</h4><p>执行以下命令安装插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure></p>
+<p>在主题目录下_config.yml里面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-配置"><a href="#5-配置" class="headerlink" title="5.配置"></a>5.配置</h3><h4 id="5-1-添加文章目录"><a href="#5-1-添加文章目录" class="headerlink" title="5.1 添加文章目录"></a>5.1 添加文章目录</h4><p>修改layout/_partial/article.ejs文件，在&lt;%- post.content %&gt;的前面，插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;toc&quot; class=&quot;toc-article&quot;&gt;</span><br><span class="line">  &lt;strong class=&quot;toc-title&quot;&gt;文章目录&lt;/strong&gt;</span><br><span class="line">  &lt;%- toc(post.content) %&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>打开文章目录开关，文章title里toc: true，见下一节。</p>
+<p> 修改对应主题目录 source/css/_partial/article.styl，在最后添加以下样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*toc*/</span></span><br><span class="line"><span class="selector-class">.toc-article</span></span><br><span class="line"><span class="selector-tag">background</span> <span class="selector-id">#eeeeee</span></span><br><span class="line"><span class="selector-tag">margin</span> 2<span class="selector-tag">em</span> 0 0 0<span class="selector-class">.2em</span></span><br><span class="line"><span class="selector-tag">padding</span> 1<span class="selector-tag">em</span></span><br><span class="line"><span class="selector-tag">border-radius</span> 5<span class="selector-tag">px</span></span><br><span class="line"><span class="selector-class">.toc-title</span></span><br><span class="line">  <span class="selector-tag">font-size</span> 120%</span><br><span class="line"><span class="selector-tag">strong</span></span><br><span class="line">  <span class="selector-tag">padding</span> 0<span class="selector-class">.3em</span> 1</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span><span class="selector-class">.toc</span></span><br><span class="line">  <span class="selector-tag">width</span> 100%</span><br><span class="line">  <span class="selector-tag">margin</span> 1<span class="selector-tag">em</span> 2<span class="selector-tag">em</span> 0 0</span><br><span class="line"><span class="selector-id">#toc</span></span><br><span class="line">  <span class="selector-tag">line-height</span> 1<span class="selector-tag">em</span></span><br><span class="line">  <span class="selector-tag">font-size</span> 0<span class="selector-class">.8em</span></span><br><span class="line">  <span class="selector-tag">float</span> <span class="selector-tag">right</span></span><br><span class="line">  <span class="selector-class">.toc</span></span><br><span class="line">    <span class="selector-tag">padding</span> 0 </span><br><span class="line">    <span class="selector-tag">li</span></span><br><span class="line">      <span class="selector-tag">list-style-type</span> <span class="selector-tag">none</span></span><br><span class="line">  <span class="selector-class">.toc-child</span> </span><br><span class="line">    <span class="selector-tag">padding-left</span> 0<span class="selector-tag">em</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#toc</span><span class="selector-class">.toc-aside</span></span><br><span class="line">  <span class="selector-tag">display</span> <span class="selector-tag">none</span></span><br><span class="line">  <span class="selector-tag">width</span> 13%</span><br><span class="line">  <span class="selector-tag">position</span> <span class="selector-tag">fixed</span></span><br><span class="line">  <span class="selector-tag">right</span> 2%</span><br><span class="line">  <span class="selector-tag">top</span> 320<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">overflow</span> <span class="selector-tag">hidden</span></span><br><span class="line">  <span class="selector-tag">line-height</span> 1<span class="selector-class">.5em</span></span><br><span class="line">  <span class="selector-tag">font-size</span> 1<span class="selector-tag">em</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-tag">color-heading</span></span><br><span class="line">  <span class="selector-tag">opacity</span> <span class="selector-class">.6</span></span><br><span class="line">  <span class="selector-tag">transition</span> <span class="selector-tag">opacity</span> 1<span class="selector-tag">s</span> <span class="selector-tag">ease-out</span></span><br><span class="line">  <span class="selector-tag">strong</span></span><br><span class="line">    <span class="selector-tag">padding</span> 0<span class="selector-class">.3em</span> 0</span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">color-font</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">transition</span> <span class="selector-tag">opacity</span> <span class="selector-class">.3s</span> <span class="selector-tag">ease-out</span></span><br><span class="line">    <span class="selector-tag">opacity</span> 1</span><br><span class="line">  <span class="selector-tag">a</span></span><br><span class="line">    <span class="selector-tag">transition</span> <span class="selector-tag">color</span> 1<span class="selector-tag">s</span> <span class="selector-tag">ease-out</span></span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">      <span class="selector-tag">color</span> <span class="selector-tag">color-theme</span></span><br><span class="line">      <span class="selector-tag">transition</span> <span class="selector-tag">color</span> <span class="selector-class">.3s</span> <span class="selector-tag">ease-out</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-2-文章配置"><a href="#5-2-文章配置" class="headerlink" title="5.2 文章配置"></a>5.2 文章配置</h4><p>修改scaffolds/post.md 即文章的通用模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:         #添加分类</span><br><span class="line">toc: true           #打开文章目录</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="6-hexo常用操作"><a href="#6-hexo常用操作" class="headerlink" title="6. hexo常用操作"></a>6. hexo常用操作</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新建文章</td>
+<td style="text-align:right">hexo n &lt;文章名&gt;</td>
+<td style="text-align:center">等同于 hexo new</td>
+</tr>
+<tr>
+<td>hexo g</td>
+<td style="text-align:right">hexo g</td>
+<td style="text-align:center">等同于 hexo generate</td>
+</tr>
+<tr>
+<td>hexo s</td>
+<td style="text-align:right">hexo s</td>
+<td style="text-align:center">等同于 hexo server</td>
+</tr>
+<tr>
+<td>hexo d</td>
+<td style="text-align:right">hexo d</td>
+<td style="text-align:center">等同于 hexo deploy</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
+
     <footer class="article-footer">
       
-        <a data-url="http://abckeep.com/2016/04/08/hello-world/" data-id="cimrzhpiy0000kv6m0gcab1vs" class="article-share-link" data-share="baidu" data-title="Hello World">Share</a>
+        <a data-url="http://abckeep.com/2016/05/19/hexo/" data-id="cioedtjkk0000jf6mxe7b31zk" class="article-share-link" data-share="baidu" data-title="hexo搭建博客">分享到</a>
       
 
       
-        <a href="http://abckeep.com/2016/04/08/hello-world/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://abckeep.com/2016/05/19/hexo/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-javascript-cookie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/19/javascript-cookie/" class="article-date">
+  <time datetime="2016-05-19T13:27:51.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/19/javascript-cookie/">javascript操作cookie无效解决方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-domain合法性设置问题"><span class="toc-number">1.</span> <span class="toc-text">1.domain合法性设置问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-本地测试时使用localhost"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 本地测试时使用localhost</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-带了端口等"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 带了端口等</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-path设置问题"><span class="toc-number">2.</span> <span class="toc-text">2.path设置问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-expires设置"><span class="toc-number">3.</span> <span class="toc-text">3. expires设置</span></a></li></ol>
+</div>
+
+
+        <p>vascript操作cookie失效原因？</p>
+<h3 id="1-domain合法性设置问题"><a href="#1-domain合法性设置问题" class="headerlink" title="1.domain合法性设置问题"></a>1.domain合法性设置问题</h3><blockquote>
+<p>domian作用：默认情况下，domain会被设置为创建该cookie的页面所在的域名，所以当给相同域名发送请求时，该cookie会一起被发送至服务器.如果需要在所有的二级域名下都记录一个cookie,则需要设置domain。</p>
+</blockquote>
+<h4 id="1-1-本地测试时使用localhost"><a href="#1-1-本地测试时使用localhost" class="headerlink" title="1.1 本地测试时使用localhost"></a>1.1 本地测试时使用localhost</h4><pre><code>由于localhost不是有效的域名，domain设置成这个，操作cookie是被忽略的。
+
+解决方法：把localhost改成127.0.0.1  或者 不使用domain。
+</code></pre><h4 id="1-2-带了端口等"><a href="#1-2-带了端口等" class="headerlink" title="1.2 带了端口等"></a>1.2 带了端口等</h4><p>注意设置domain时是不能带端口，也不需要带协议头。</p>
+<h3 id="2-path设置问题"><a href="#2-path设置问题" class="headerlink" title="2.path设置问题"></a>2.path设置问题</h3><blockquote>
+<p>path作用：指定了请求的资源URL中只有在存在指定的路径时，才会发送Cookie消息头。</p>
+</blockquote>
+<p>  path会导致在哪个路径下的页面设置的cookie，也只有这个路径下的页面才能操作。</p>
+<p>  解决方法：设置成根目录 path=/   即忽略path，任何路径都可以访问。</p>
+<h3 id="3-expires设置"><a href="#3-expires设置" class="headerlink" title="3. expires设置"></a>3. expires设置</h3><blockquote>
+<p>expires作用： cookie的过期时间</p>
+</blockquote>
+<p>删除一个cookie，是将cookie的expires设置成过期的时间。但需要留意的地方删除时domain，path要和创建cookie时一样，相当于重新设置一遍只是多加了个过期时间选项。</p>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/05/19/javascript-cookie/" data-id="cioedtjm9000ijf6mxp0mkroj" class="article-share-link" data-share="baidu" data-title="javascript操作cookie无效解决方法">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/05/19/javascript-cookie/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie/">cookie</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-sshSecretKey" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/19/sshSecretKey/" class="article-date">
+  <time datetime="2016-05-19T13:07:53.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/19/sshSecretKey/">ssh 密钥登陆</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建密钥文件"><span class="toc-number">1.</span> <span class="toc-text">1.创建密钥文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-将公钥配置到ssh远程主机"><span class="toc-number">2.</span> <span class="toc-text">2.将公钥配置到ssh远程主机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-linux命令行形式"><span class="toc-number">2.1.</span> <span class="toc-text">3.1 linux命令行形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-windows软件连接"><span class="toc-number">2.2.</span> <span class="toc-text">3.2 windows软件连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-简化登陆命令以及配置多个ssh账号"><span class="toc-number">3.</span> <span class="toc-text">4. 简化登陆命令以及配置多个ssh账号</span></a></li></ol>
+</div>
+
+
+        <h2 id="1-创建密钥文件"><a href="#1-创建密钥文件" class="headerlink" title="1.创建密钥文件"></a>1.创建密钥文件</h2><hr>
+<p>在终端中输入以下命令后，一直敲回车，会在~/.ssh/目录下生成id_rsa 和 id_rsa.pub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C  &apos;shenhaili1219@sina.com&apos;</span><br></pre></td></tr></table></figure></p>
+<p>-t 指定密钥类型，默认rsa<br>-C 设置注释，默认当前linux用户名<br>-f 设置密钥文件名，默认生成id_rsa 和 id_rsa.pub  （需要多对密钥登陆不同远程主机时需要指定名字）</p>
+<hr>
+<h2 id="2-将公钥配置到ssh远程主机"><a href="#2-将公钥配置到ssh远程主机" class="headerlink" title="2.将公钥配置到ssh远程主机"></a>2.将公钥配置到ssh远程主机</h2><hr>
+<p>将上面生成的公钥~/.ssh/id_rsa_work.pub的 内容复制追加到到ssh远程主机对应用户下的~/.ssh/authorized_keys文件里(没有就自己新建)</p>
+<p>修改ssh远程主机文件权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 644 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></p>
+<p>为.ssh目录添加ssh_home_t标签  （SELinux安全限制）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#查看.ssh目录是否没有ssh_home_t标签</span><br><span class="line">ls -laZ</span><br><span class="line">#drwxr-xr-x. root root unconfined_u:object_r:admin_home_t:s0 .ssh  发现没有则执行下面语句</span><br><span class="line">restorecon -r -vv ~/.ssh</span><br><span class="line">#drwxr-xr-x. root root unconfined_u:object_r:ssh_home_t:s0 .ssh  发现已经有了</span><br></pre></td></tr></table></figure></p>
+<p>配置ssh配置文件 使用vim /etc/ssh/sshd_config 做如下修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#启用密钥认证</span><br><span class="line">RSAAuthentication yes </span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile   .ssh/authorized_keys</span><br><span class="line"></span><br><span class="line">#禁止口令认证</span><br><span class="line">PasswordAuthentication no</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意重启前应该留个持续活跃的会话（ssh超时你就蒙了），或者先不要关闭口令认证方式，防止登不上。</p>
+</blockquote>
+<p>重启sshd服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure></p>
+<p>##3.客户端连接测试</p>
+<h3 id="3-1-linux命令行形式"><a href="#3-1-linux命令行形式" class="headerlink" title="3.1 linux命令行形式"></a>3.1 linux命令行形式</h3><p>直接执行下面命令就可以连接远程主机了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@你的ip</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意： 默认是id_rsa 等名字   如果指定密钥名字会失败。</p>
+</blockquote>
+<h3 id="3-2-windows软件连接"><a href="#3-2-windows软件连接" class="headerlink" title="3.2 windows软件连接"></a>3.2 windows软件连接</h3><p>比如putty，winscp 等软件使用的都是ppk文件（secureCRT除外它使用就是id_rsa不需要转换。）<br>将id_rsa转换成ppk文件需要用到<a href="http://7xprhd.com1.z0.glb.clouddn.com/blog/ssh/puttygen.exe" target="_blank" rel="external">puttygen</a></p>
+<p> 操作步骤：</p>
+<ul>
+<li>打开puttygen</li>
+<li>菜单栏选中  Conversions &gt; import key &gt; 选择id_rsa文件</li>
+<li>点击Actions框中 【Save private key】 按钮保存ppk文件</li>
+</ul>
+<p>这时使用putty等软件添加上ppk文件就可以了</p>
+<h2 id="4-简化登陆命令以及配置多个ssh账号"><a href="#4-简化登陆命令以及配置多个ssh账号" class="headerlink" title="4. 简化登陆命令以及配置多个ssh账号"></a>4. 简化登陆命令以及配置多个ssh账号</h2><p>在.ssh目录下创建config<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure></p>
+<p>做如下配置，如果多个按照下面格式多配置几次<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host        alias #自定义别名</span><br><span class="line">HostName        hostname  #替换为你的ssh服务器ip或domain</span><br><span class="line">Port            port #ssh服务器端口，默认为22</span><br><span class="line">User            user #ssh服务器用户名</span><br><span class="line">IdentityFile    ~/.ssh/id_rsa #第一个步骤生成的公钥文件对应的私钥文件</span><br></pre></td></tr></table></figure></p>
+<p>以后登录服务器只需要下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh alias</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/05/19/sshSecretKey/" data-id="cioedtjlk000ajf6mmg7orat8" class="article-share-link" data-share="baidu" data-title="ssh 密钥登陆">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/05/19/sshSecretKey/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-dns" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/19/dns/" class="article-date">
+  <time datetime="2016-05-19T13:02:03.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/网络/">网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/19/dns/">dns</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-dns解析大概流程"><span class="toc-number">1.</span> <span class="toc-text">1. dns解析大概流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-域名解析记录"><span class="toc-number">2.</span> <span class="toc-text">2. 域名解析记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-A记录"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 A记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-CNAME-别名"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 CNAME 别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-URL-转发"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 URL 转发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-MX记录"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 MX记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-NS记录"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 NS记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-TXT记录"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 TXT记录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-域名解析记录之间的关系"><span class="toc-number">3.</span> <span class="toc-text">3.域名解析记录之间的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-ns记录、A记录、cname记录优先级"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 ns记录、A记录、cname记录优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-一些思考"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 一些思考</span></a></li></ol></li></ol>
+</div>
+
+
+        <blockquote>
+<p>dns: 就是域名系统，作用就是将域名解析成ip地址</p>
+</blockquote>
+<h2 id="1-dns解析大概流程"><a href="#1-dns解析大概流程" class="headerlink" title="1. dns解析大概流程"></a>1. dns解析大概流程</h2><p>下图是用户在浏览器输入域名后的解析流程：<br><img src="http://7xprhd.com1.z0.glb.clouddn.com/blog/dns/dns01.png" alt="dns01"></p>
+<ol>
+<li>检查浏览器是否缓存了对应域名记录，有直接返回，没有则继续下一步（例：chrome中输入chrome://net-internals/#dns 可以看到）</li>
+<li>检查操作系统是否缓存了域名记录，没有则继续（windows：hosts文件 ，  linux:named.conf文件）</li>
+<li>将域名发送给网络设置DNS服务器这一项设置的ip地址（即local DNS），检查是否缓存，没有则继续</li>
+<li>local DNS 没有查找到，直接到Root Server 域名服务器请求解析</li>
+<li>Root Server 域名服务器 返回给local DNS 主域名服务器gTLD server地址（gTLD是国际顶级域名服务器，如.com , .cn , .org）</li>
+<li>local DNS 向 gTLD 服务器发送请求</li>
+<li>gTLD 服务器 返回name server 服务器地址</li>
+<li>local DNS 向 name server 服务器发送请求（name server即权威域名服务器，即注册域名的服务商）</li>
+<li>返回域名对应ip地址，并缓存，缓存时间由TTL值控制。</li>
+<li>把解析结果返回给用户，根据TTL缓存</li>
+</ol>
+<h2 id="2-域名解析记录"><a href="#2-域名解析记录" class="headerlink" title="2. 域名解析记录"></a>2. 域名解析记录</h2><h3 id="2-1-A记录"><a href="#2-1-A记录" class="headerlink" title="2.1 A记录"></a>2.1 A记录</h3><p>作用：用来指定域名对应ip地址<br>适用范围： 适应于独立主机，有固定ip地址</p>
+<h3 id="2-2-CNAME-别名"><a href="#2-2-CNAME-别名" class="headerlink" title="2.2 CNAME 别名"></a>2.2 CNAME 别名</h3><p>作用：映射域名到另一个域名<br>适用范围： 适应于虚拟主机，变动ip地址主机（cdn加速也会用到）</p>
+<h3 id="2-3-URL-转发"><a href="#2-3-URL-转发" class="headerlink" title="2.3 URL 转发"></a>2.3 URL 转发</h3><ul>
+<li>作用：重定向域名到另一个URL地址 （实际就是301转发，有利于搜索引擎seo）</li>
+<li>适用范围： 适应于更换域名又不想抛弃老用户<h3 id="2-4-MX记录"><a href="#2-4-MX记录" class="headerlink" title="2.4 MX记录"></a>2.4 MX记录</h3></li>
+<li>作用：邮件交换记录,用于将以该域名为结尾的电子邮件指向对应的邮件服务器以进行处理,即：给寄信者指明某个域名的邮件服务器有哪些.</li>
+<li>适用范围： 需要设置邮箱，让邮箱能收到邮件，就需要添加MX记录<h3 id="2-5-NS记录"><a href="#2-5-NS记录" class="headerlink" title="2.5 NS记录"></a>2.5 NS记录</h3></li>
+<li>作用： 表示域名由哪台DNS服务器进行解析</li>
+<li>适用范围： dns加速(例如：dnspod)等需要修改此值<h3 id="2-6-TXT记录"><a href="#2-6-TXT记录" class="headerlink" title="2.6 TXT记录"></a>2.6 TXT记录</h3></li>
+<li><p>作用： 目前主要用于反垃圾邮件，常用SPF格式，它向收信者表明，哪些邮件服务器是经过域名认可发送邮件的。防止垃圾邮件伪造该域名的发件人发送垃圾邮件。</p>
+<p>典型的一般设置成： “v=spf1 a mx ~all” 表示只有这个域名的a记录和mx记录中的ip地址有权限使用这个域名发送邮件</p>
+</li>
+<li>适用范围： 反垃圾邮件。</li>
+</ul>
+<h2 id="3-域名解析记录之间的关系"><a href="#3-域名解析记录之间的关系" class="headerlink" title="3.域名解析记录之间的关系"></a>3.域名解析记录之间的关系</h2><h3 id="3-1-ns记录、A记录、cname记录优先级"><a href="#3-1-ns记录、A记录、cname记录优先级" class="headerlink" title="3.1 ns记录、A记录、cname记录优先级"></a>3.1 ns记录、A记录、cname记录优先级</h3><blockquote>
+<p>除了需要特殊用途如：邮件服务器（mx记录），更换域名（url转发），反垃圾邮件（txt记录），实际我们平常去用域名功能主要就是ns记录、A记录、cname记录。</p>
+</blockquote>
+<p> NS记录实际就是修改NameServer服务器（换dns服务器），如果修改成其他服务器，那么其他记录配置都不生效，域名解析管理的配置也就需要在更改后域名服务器里配置。A记录是直接指向ip地址，即域名就直接解析成这个ip地址。cname 指向另一个域名，即现在这个域名解析变成对另一个域名查询对应的记录。</p>
+<p><strong>优先级</strong>：  NS记录  &gt;   A记录   &gt;  cname记录</p>
+<p>很多域名服务商限制：A记录/CNAME记录/URL转发记录中，相同的指向只能存在一条，因为实际你配了很多相同的，优先级低的也不会生效。</p>
+<h3 id="3-2-一些思考"><a href="#3-2-一些思考" class="headerlink" title="3.2 一些思考"></a>3.2 一些思考</h3><ol>
+<li><p>A记录 与 cname 区别</p>
+<p>A记录功能上是差不多的，但是使用CNAME可以很方便的变更ip地址，因为一台服务器可以有非常多的网站，我们可以为该台服务器设置一条A记录，其他N个三级域名都是用别名指向这个A记录，那么以后变更服务器，就只要改一条A记录。<br>其次某个三级域名也可以通过CNAME进行CDN加速，一些防护等。</p>
+</li>
+<li><p>NS记录 和 CNAME 区别</p>
+<p>功能上前面已经说了，这里说下在CDN上使用区别：<br>NS记录： 方便管理，生效时间慢，<br>CNAME记录：生效时间快，但是针对顶级域名@，麻烦</p>
+<blockquote>
+<p>@:代表三级域名为空，如： abckeep.com   abckeep前面没有值。 </p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>CNAME记录和MX记录冲突</li>
+</ol>
+<p>原因RFC文档说明如下：</p>
+<blockquote>
+<p>递归 DNS 服务器在查询某个常规域名记录（非 CNAME 记录）时，如果在本地 cache 中已有该域名有对应的 CNAME 记录，则会开始用该别名记录来重启查询。 上文中第一次 dig 查询 MX 记录即对应于这种情况。如果直接在授权服务器上查询， 则总是能得到预期的结果。或者简单的理解为 CNAME 的优先级更高。<br>已经注册了 CNAME 类型的域名记录不能再注册除 DNSSEC 相关类型记录 （RRSIG， NSEC 等）之外的其他类型记录，包括（MX， A， NS 等记录）。这就是本文最开始 dig 查询 MX 记录拿不到预期结果的原因。从用户的角度来说， 对任何记录（尤其是 @ 记录，因为该记录用到 MX 的可能性非常大）的配置如果 用到了 CNAME，则需要知道该域名不可再配置 MX 等其他记录。从 DNS 服务提供 商的角度来说，需要显示的告知用户这样配置的风险，警示和教育用户。</p>
+</blockquote>
+<p> 由于mx记录一般使用都是根域名，所以有些dns服务根域名不会让你设置CNAME。只支持A记录。</p>
+<blockquote>
+<p>可以使用linux命令dig 测试域名解析。</p>
+</blockquote>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/05/19/dns/" data-id="cioedtjkt0001jf6m6ax9z8v9" class="article-share-link" data-share="baidu" data-title="dns">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/05/19/dns/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dns/">dns</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-jdk" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/27/jdk/" class="article-date">
+  <time datetime="2016-04-27T06:51:09.000Z" itemprop="datePublished">2016-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/27/jdk/">linux 安装 jdk</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-简述"><span class="toc-number">1.</span> <span class="toc-text">1. 简述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-下载"><span class="toc-number">2.</span> <span class="toc-text">2. 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置环境变量"><span class="toc-number">3.</span> <span class="toc-text">3. 配置环境变量</span></a></li></ol>
+</div>
+
+
+        <h2 id="1-简述"><a href="#1-简述" class="headerlink" title="1. 简述"></a>1. 简述</h2><p>在官网下载安装java前顺便复习几个概念，java分为三个体系</p>
+<p>-<strong>Java SE</strong>（J2SE，Java2 Platform Standard Edition，标准版）就是基于jdk和jre的,允许开发和部署在桌面、服务器、嵌入式环境和实时环境中使用的Java应用程序,为Java EE 提供基础.<br>-<strong>Java EE</strong> (J2EE，Java 2 Platform, Enterprise Edition，企业版)开发和部署可移植、健壮、可伸缩且安全的服务器端 Java 应用程序.提供Web 服务、组件模型、管理和通信API，可以用来实现企业级的面向服务体系结构（service-oriented architecture，SOA）和Web 2.0 应用程序.建立于java se之上.<br>-<strong>Java ME</strong> (J2ME，Java 2 Platform Micro Edition，微型版）为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境.是做嵌入式的。已经很少用</p>
+<p>还有两个概念：<br><strong>JDK</strong>（Java Development Kit ） 是针对Java开发员的产品，是整个Java的核心，包括了Java运行环境JRE、Java工具和Java基础类库<br><strong>JRE</strong>（Java Runtime Environment）是运行JAVA程序所必须的环境的集合，包含JVM标准实现及Java核心类库<br><strong>JVM</strong>是Java Virtual Machine（Java虚拟机）的缩写，是整个java实现跨平台的最核心的部分，能够运行以Java语言写作的软件程序</p>
+<h2 id="2-下载"><a href="#2-下载" class="headerlink" title="2. 下载"></a>2. 下载</h2><p>这里我们安装jdk1.7：<br>官网下载地址： <a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u55-oth-JPR" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u55-oth-JPR</a></p>
+<p>百度云盘： <a href="http://pan.baidu.com/s/1mhk9a4K" target="_blank" rel="external">http://pan.baidu.com/s/1mhk9a4K</a></p>
+<p> 下载源码包到当前目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#解压  </span><br><span class="line">tar -zxvf jdk-7u55-linux-x64.tar.gz</span><br><span class="line"># 命令解析：</span><br><span class="line">#  tar 是打包命令 即把多个文件或目录包成一个大文件命令，</span><br><span class="line">#   因为很多压缩命令仅对单个文件压缩  有些可以对目录压缩也是把目录里面所有文件</span><br><span class="line">#   分别压缩。 所以有了tar命令</span><br><span class="line">#   (tar.gz  代表打包后gzip压缩   tar.bz2 代表打包后bzip2压缩)   </span><br><span class="line">#</span><br><span class="line">#  -z  --gzip      支持gzip解压缩 </span><br><span class="line">#  -x  --extract   解包</span><br><span class="line">#  -v  --verbose   显示正在处理的文件列表</span><br><span class="line">#  -f  --file      指定被处理的文件</span><br><span class="line">#  -c  --create    打包</span><br><span class="line">#  -j  --bzip2     支持bzip2解压缩</span><br><span class="line"></span><br><span class="line">#移动并重命名</span><br><span class="line">mv jdk1.7.0_55/  /usr/local/jdk7</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h2><p> 编辑所有用户共用的环境配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></p>
+<p>在末尾追加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/local/jdk7</span><br><span class="line">JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line">export JAVA_HOME JRE_HOME PATH CLASSPATH</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>配置解释：<br><em>JAVA_HOME</em>: 指向jdk的安装目录，Eclipse/NetBeans/Tomcat等软件就是通过搜索JAVA_HOME变量来找到并使用安            装好的jdk<br><em>JRE_HOME</em>: 指向jre的目录<br><em>CLASSPATH</em> 作用是指定类搜索路径，要使用已经编写好的类，前提当然是能够找到它们了，JVM就是通过CLASSPTH来寻找类的.当然，当前目录“.”也必须加入到该变量中<br><em>PATH</em> ： 作用可以在任何目录下执行javac/java等工具，注意是追加新的配置不是覆盖。（linux中冒号分割）<br>export :  使所有子进程都会继承环境变量。</p>
+</blockquote>
+<p>执行以下命令使环境配置立即生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">#验证  显示jdk版本则表示安装成功</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/04/27/jdk/" data-id="cioedtjn8000njf6m63cmqhmx" class="article-share-link" data-share="baidu" data-title="linux 安装 jdk">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/04/27/jdk/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk/">jdk</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-tmux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/18/tmux/" class="article-date">
+  <time datetime="2016-04-19T03:57:49.000Z" itemprop="datePublished">2016-04-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/18/tmux/">终端复用软件 tmux</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要用tmux"><span class="toc-number">1.</span> <span class="toc-text">为什么要用tmux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装tmux"><span class="toc-number">2.</span> <span class="toc-text">安装tmux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能使用"><span class="toc-number">3.</span> <span class="toc-text">功能使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#层次结构"><span class="toc-number">3.1.</span> <span class="toc-text">层次结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统操作"><span class="toc-number">3.2.</span> <span class="toc-text">系统操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#会话"><span class="toc-number">3.3.</span> <span class="toc-text">会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#窗口"><span class="toc-number">3.4.</span> <span class="toc-text">窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#窗格"><span class="toc-number">3.5.</span> <span class="toc-text">窗格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">3.6.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol>
+</div>
+
+
+        <h2 id="为什么要用tmux"><a href="#为什么要用tmux" class="headerlink" title="为什么要用tmux"></a>为什么要用tmux</h2><ul>
+<li>可以防止ssh超时</li>
+<li>可以分割屏幕做更多的事</li>
+<li>可以断开ssh而程序不停止，继续运行</li>
+<li>可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。</li>
+</ul>
+<h2 id="安装tmux"><a href="#安装tmux" class="headerlink" title="安装tmux"></a>安装tmux</h2><p>centos  yum安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install tmux</span><br></pre></td></tr></table></figure></p>
+<p>源码编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#编译安装前需要libevent</span><br><span class="line">yum install libevent-devel.x86_64</span><br><span class="line"></span><br><span class="line">wget http://downloads.sourceforge.net/tmux/tmux-1.6.tar.gz</span><br><span class="line">wget http://7xprhd.com1.z0.glb.clouddn.com/blog/tmux/tmux-1.6.tar.gz</span><br><span class="line">tar zxvf tmux-1.6.tar.gz</span><br><span class="line"></span><br><span class="line">cd tmux-1.6</span><br><span class="line"></span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line"></span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<h2 id="功能使用"><a href="#功能使用" class="headerlink" title="功能使用"></a>功能使用</h2><h3 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h3><ul>
+<li>session：用来区分不同的工作空间，可以长时间存在，也可以临时退出再重进。可以包含多个window</li>
+<li>window : 窗口,类似单个工作桌面，可以包含多个pane</li>
+<li>pane :  窗格，类似桌面分屏后的单元</li>
+</ul>
+<p><img src="http://7xprhd.com1.z0.glb.clouddn.com/blog%2Ftmux%2Fimg%2Ftmux_jianjie.jpg" alt="cmd-markdown-logo"></p>
+<h3 id="系统操作"><a href="#系统操作" class="headerlink" title="系统操作"></a>系统操作</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>操作</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>列出所有快捷键</td>
+<td>Ctrl+b ?</td>
+<td></td>
+</tr>
+<tr>
+<td>进入复制模式</td>
+<td>Ctrl+b [</td>
+<td>可以配置vi和emacs模式，见配置文件设置</td>
+</tr>
+<tr>
+<td>粘贴</td>
+<td>Ctrl+b ]</td>
+<td></td>
+</tr>
+<tr>
+<td>重新加载配置文件</td>
+<td>source-file ~/.tmux.conf</td>
+<td>Ctrl+b :之后执行前</td>
+</tr>
+</tbody>
+</table>
+<h3 id="会话"><a href="#会话" class="headerlink" title="会话"></a>会话</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新建会话</td>
+<td style="text-align:right">tmux new -s &lt;目标会话名&gt;</td>
+<td style="text-align:center">加上d选项（tmux new -s &lt;目标会话名&gt; -d ）表示在后台建立</td>
+</tr>
+<tr>
+<td>列出会话</td>
+<td style="text-align:right">tmux ls</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>连接会话</td>
+<td style="text-align:right">tmux a -t &lt;目标会话名&gt;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>分离会话</td>
+<td style="text-align:right">Ctrl-b d</td>
+<td style="text-align:center">Tmux中在运行的程序还会继续运行</td>
+</tr>
+<tr>
+<td>结束会话</td>
+<td style="text-align:right">exit 或 [Ctrl+d] 或 tmux kill-session -t &lt;目标会话名&gt;</td>
+<td style="text-align:center">会话关闭tmux里面的程序也会关闭</td>
+</tr>
+<tr>
+<td>会话切换</td>
+<td style="text-align:right">Ctrl-b s</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>重命名当前会话</td>
+<td style="text-align:right">Ctrl-b $</td>
+</tr>
+</tbody>
+</table>
+<h3 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建窗口</td>
+<td style="text-align:right">Ctrl-b  c</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>重命名当前窗口</td>
+<td style="text-align:right">Ctrl-b ,</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>退出当前窗口</td>
+<td style="text-align:right">Ctrl-b &amp;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换窗口</td>
+<td style="text-align:right">Ctrl-b w</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换到下一个窗口</td>
+<td style="text-align:right">Ctrl-b n</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换到上一个窗口</td>
+<td style="text-align:right">Ctrl-b p</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换至指定窗口</td>
+<td style="text-align:right">Ctrl-b 数字</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>在所有窗口中查找指定文本窗口</td>
+<td style="text-align:right">Ctrl-b f</td>
+</tr>
+</tbody>
+</table>
+<h3 id="窗格"><a href="#窗格" class="headerlink" title="窗格"></a>窗格</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平分割</td>
+<td style="text-align:right">Ctrl-b “</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>垂直分割</td>
+<td style="text-align:right">Ctrl-b %</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>关闭当前面板</td>
+<td style="text-align:right">exit</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>将当前面板置于新窗口</td>
+<td style="text-align:right">Ctrl-b !</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>1个单元格调整当前面板大小</td>
+<td style="text-align:right">Ctrl-b Ctrl-方向键</td>
+<td style="text-align:center">如果是alt 则是5个单元调整</td>
+</tr>
+<tr>
+<td>选择面板</td>
+<td style="text-align:right">Ctrl-b 方向键</td>
+</tr>
+</tbody>
+</table>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>新建配置文件：  ~/.tmux.conf<br>修改权限： chmod 777 ~/.tmux.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># bind a reload key [Ctrl-b r]</span><br><span class="line">bind R source-file ~/.tmux.conf ; display-message &quot;Config reloaded..&quot;</span><br><span class="line"></span><br><span class="line"># Use vim keybindings in copy mode</span><br><span class="line">setw -g mode-keys vi</span><br><span class="line"># start selecting text typing &apos;v&apos; key (once you are in copy mode)</span><br><span class="line">bind-key -t vi-copy v begin-selection</span><br><span class="line"># copy selected text to the system&apos;s clipboard</span><br><span class="line">bind-key -t vi-copy y copy-pipe &quot;reattach-to-user-namespace pbcopy&quot;</span><br><span class="line"></span><br><span class="line">#开启窗口的UTF-8支持</span><br><span class="line">set-window-option -g utf8 on </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">########## 状态栏 start#########</span><br><span class="line"># 颜色</span><br><span class="line">  set -g status-bg black</span><br><span class="line">  set -g status-fg white</span><br><span class="line"># 对齐方式</span><br><span class="line">  set-option -g status-justify centre</span><br><span class="line"># 左下角</span><br><span class="line">  set-option -g status-left &apos;#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]&apos;</span><br><span class="line">  set-option -g status-left-length 20</span><br><span class="line"># 窗口列表</span><br><span class="line">  setw -g automatic-rename on</span><br><span class="line">  set-window-option -g window-status-format &apos;#[dim]#I:#[default]#W#[fg=grey,dim]&apos;</span><br><span class="line">  set-window-option -g window-status-current-format &apos;#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]&apos;</span><br><span class="line"># 右下角</span><br><span class="line">  set -g status-right &apos;#[fg=green][#[fg=cyan]%Y-%m-%d#[fg=green]]&apos;</span><br><span class="line">########## 状态栏 end #########</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/04/18/tmux/" data-id="cioedtjlm000bjf6mvusygiet" class="article-share-link" data-share="baidu" data-title="终端复用软件 tmux">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/04/18/tmux/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -127,28 +774,65 @@
       <aside id="sidebar">
   
     
-  
-    
-  
-    
-  
-    
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">dns</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/04/08/hello-world/">Hello World</a>
+            <a href="/2016/05/19/hexo/">hexo搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/javascript-cookie/">javascript操作cookie无效解决方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/sshSecretKey/">ssh 密钥登陆</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/dns/">dns</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/27/jdk/">linux 安装 jdk</a>
           </li>
         
       </ul>
@@ -158,7 +842,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
+    <h3 class="widget-title">友情链接</h3>
     <div class="widget">
       <ul>
         
@@ -182,7 +866,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
+      &copy; 2016 shenhaili<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       .
       Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
@@ -209,7 +893,7 @@ var _hmt = _hmt || [];
 </nav>
   <!-- totop start -->
 <div id="totop">
-<a title="totop"><img src="/img/scrollup.png"/></a>
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 </div>
 
 <!-- totop end -->
