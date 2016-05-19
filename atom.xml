@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>沈海立</title>
+  <subtitle>在心为志，出口为言</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://abckeep.com/"/>
+  <updated>2016-05-19T14:17:41.313Z</updated>
+  <id>http://abckeep.com/</id>
+  
+  <author>
+    <name>shenhaili</name>
+    <email>shenhaili1219@sina.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo搭建博客</title>
+    <link href="http://abckeep.com/2016/05/19/hexo/"/>
+    <id>http://abckeep.com/2016/05/19/hexo/</id>
+    <published>2016-05-19T14:03:18.000Z</published>
+    <updated>2016-05-19T14:17:41.313Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;1-为什么要用hexo，它是个啥？&quot;&gt;&lt;a href=&quot;#1-为什么要用hexo，它是个啥？&quot; class=&quot;headerlink&quot; title=&quot;1.为什么要用hexo，它是个啥？&quot;&gt;&lt;/a&gt;1.为什么要用hexo，它是个啥？&lt;/h2&gt;&lt;p&gt;   这主要源于很多人想构建静态网站，比如我就是通过GitHub Pages 来搭建免费的博客，而GitHub Pages只能放静态网站，这时就需要一个博客发布工具（比如：jekyll,hexo等）自动生成静态页面效果，而我们只需要用markdown等语法描述内容其他复杂的页面效果就交给hexo去做。&lt;/p&gt;
+&lt;p&gt;   &lt;strong&gt;hexo&lt;/strong&gt;是由Node.js驱动的一款快速、简单且功能强大的博客框架。&lt;a href=&quot;https://www.zybuluo.com/cmd/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-使用hexo&quot;&gt;&lt;a href=&quot;#2-使用hexo&quot; class=&quot;headerlink&quot; title=&quot;2.使用hexo&quot;&gt;&lt;/a&gt;2.使用hexo&lt;/h2&gt;&lt;h3 id=&quot;1-安装前准备&quot;&gt;&lt;a href=&quot;#1-安装前准备&quot; class=&quot;headerlink&quot; title=&quot;1.安装前准备&quot;&gt;&lt;/a&gt;1.安装前准备&lt;/h3&gt;&lt;h4 id=&quot;1-安装node-js&quot;&gt;&lt;a href=&quot;#1-安装node-js&quot; class=&quot;headerlink&quot; title=&quot;1.安装node.js&quot;&gt;&lt;/a&gt;1.安装node.js&lt;/h4&gt;&lt;p&gt;安装node的版本管理工具nvm&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;nvm安装完成后,重启终端执行以下命令安装node.js&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nvm install 4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-安装git&quot;&gt;&lt;a href=&quot;#2-安装git&quot; class=&quot;headerlink&quot; title=&quot;2.安装git&quot;&gt;&lt;/a&gt;2.安装git&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo yum install git-core&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2-安装hexo&quot;&gt;&lt;a href=&quot;#2-安装hexo&quot; class=&quot;headerlink&quot; title=&quot;2.安装hexo&quot;&gt;&lt;/a&gt;2.安装hexo&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#安装&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-cli -g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#在要使用hexo对应的目录初始化&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#清除缓存文件 (db.json) 和已生成的静态文件 (public)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#生成静态文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#启动服务器  -p, --port 重设端口 默认4000  启动后就可以访问http://localhost:4000/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-换主题&quot;&gt;&lt;a href=&quot;#3-换主题&quot; class=&quot;headerlink&quot; title=&quot;3.换主题&quot;&gt;&lt;/a&gt;3.换主题&lt;/h3&gt;&lt;p&gt;你可以挑自己喜欢风格的&lt;a href=&quot;http://www.zhihu.com/question/24422335&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;主题&lt;/a&gt;，这里我就挑了对官方主题增强版的&lt;a href=&quot;http://www.zhihu.com/question/24422335&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Landscape Plus&lt;/a&gt;，点开链接已经有详细的配置教程了&lt;/p&gt;
+&lt;h3 id=&quot;4-安装插件&quot;&gt;&lt;a href=&quot;#4-安装插件&quot; class=&quot;headerlink&quot; title=&quot;4.安装插件&quot;&gt;&lt;/a&gt;4.安装插件&lt;/h3&gt;&lt;p&gt; 我用的主题Landscape Plus已经帮我们集成蛮多插件模块，下面说下具体配置：&lt;/p&gt;
+&lt;h4 id=&quot;4-1-多说评论&quot;&gt;&lt;a href=&quot;#4-1-多说评论&quot; class=&quot;headerlink&quot; title=&quot;4.1.多说评论&quot;&gt;&lt;/a&gt;4.1.多说评论&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://duoshuo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;登陆多说&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://duoshuo.com/create-site/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;创建站点&lt;/a&gt; ，这步骤填的域名值下面duoshuo_shortname会用到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将主题目录下landscape-plus_config.yml做如下修改：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_shortname: 上面配置的域名值&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;修改themes\landscape\layout_partial\article.ejs模板&lt;br&gt;把&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;if&lt;/span&gt; (!&lt;span class=&quot;attr&quot;&gt;index&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;post.comments&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;config.disqus_shortname&lt;/span&gt;)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus_thread&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;noscript&lt;/span&gt;&amp;gt;&lt;/span&gt;Please enable JavaScript to view the &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//disqus.com/?ref_noscript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;comments powered by Disqus.&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;noscript&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &amp;#125; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;改成&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;if&lt;/span&gt; (!&lt;span class=&quot;attr&quot;&gt;index&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;post.comments&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;config.duoshuo_shortname&lt;/span&gt;)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 start --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%= post.layout %&amp;gt;-&amp;lt;%= post.slug %&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%= post.title %&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%= page.permalink %&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 end --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    var duoshuoQuery = &amp;#123;short_name:&#39;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%=&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;config.duoshuo_shortname&lt;/span&gt; %&amp;gt;&lt;/span&gt;&#39;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      (function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        var ds = document.createElement(&#39;script&#39;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ds.type = &#39;text/javascript&#39;;ds.async = true;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ds.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//static.duoshuo.com/embed.js&#39;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ds.charset = &#39;UTF-8&#39;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        (document.getElementsByTagName(&#39;head&#39;)[0] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;)();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 end --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;section&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &amp;#125; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;注意hexo目录下的_config.yml修改下面的值：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;url: 网站域名地址&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;4-2-百度统计&quot;&gt;&lt;a href=&quot;#4-2-百度统计&quot; class=&quot;headerlink&quot; title=&quot;4.2.百度统计&quot;&gt;&lt;/a&gt;4.2.百度统计&lt;/h4&gt;&lt;p&gt;百度统计注册账号，复制统计代码（请复制自己的代码，直接复制下面没用！）&lt;br&gt;添加到themes\landscape\layout_partial\footer.ejs里面&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var _hmt = _hmt || [];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  var hm = document.createElement(&quot;script&quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  hm.src = &quot;//hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxx&quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  var s = document.getElementsByTagName(&quot;script&quot;)[0]; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  s.parentNode.insertBefore(hm, s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;4-3-RSS订阅&quot;&gt;&lt;a href=&quot;#4-3-RSS订阅&quot; class=&quot;headerlink&quot; title=&quot;4.3. RSS订阅&quot;&gt;&lt;/a&gt;4.3. RSS订阅&lt;/h4&gt;&lt;p&gt;输入下面命令安装插件就好：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-feed --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;4-3-百度sitemap&quot;&gt;&lt;a href=&quot;#4-3-百度sitemap&quot; class=&quot;headerlink&quot; title=&quot;4.3. 百度sitemap&quot;&gt;&lt;/a&gt;4.3. 百度sitemap&lt;/h4&gt;&lt;p&gt;执行以下命令安装插件：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-baidu-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在主题目录下_config.yml里面添加：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 自动生成sitemap&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sitemap:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;path: sitemap.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;baidusitemap:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;path: baidusitemap.xml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;5-配置&quot;&gt;&lt;a href=&quot;#5-配置&quot; class=&quot;headerlink&quot; title=&quot;5.配置&quot;&gt;&lt;/a&gt;5.配置&lt;/h3&gt;&lt;h4 id=&quot;5-1-添加文章目录&quot;&gt;&lt;a href=&quot;#5-1-添加文章目录&quot; class=&quot;headerlink&quot; title=&quot;5.1 添加文章目录&quot;&gt;&lt;/a&gt;5.1 添加文章目录&lt;/h4&gt;&lt;p&gt;修改layout/_partial/article.ejs文件，在&amp;lt;%- post.content %&amp;gt;的前面，插入：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div id=&amp;quot;toc&amp;quot; class=&amp;quot;toc-article&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;strong class=&amp;quot;toc-title&amp;quot;&amp;gt;文章目录&amp;lt;/strong&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;%- toc(post.content) %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;打开文章目录开关，文章title里toc: true，见下一节。&lt;/p&gt;
+&lt;p&gt; 修改对应主题目录 source/css/_partial/article.styl，在最后添加以下样式：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;comment&quot;&gt;/*toc*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.toc-article&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;selector-id&quot;&gt;#eeeeee&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt; 2&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt; 0 0 0&lt;span class=&quot;selector-class&quot;&gt;.2em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;padding&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;border-radius&lt;/span&gt; 5&lt;span class=&quot;selector-tag&quot;&gt;px&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.toc-title&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;font-size&lt;/span&gt; 120%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;strong&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;padding&lt;/span&gt; 0&lt;span class=&quot;selector-class&quot;&gt;.3em&lt;/span&gt; 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.toc&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;width&lt;/span&gt; 100%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt; 2&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt; 0 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-id&quot;&gt;#toc&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;line-height&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;font-size&lt;/span&gt; 0&lt;span class=&quot;selector-class&quot;&gt;.8em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;right&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-class&quot;&gt;.toc&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;padding&lt;/span&gt; 0 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;li&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;selector-tag&quot;&gt;list-style-type&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;none&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-class&quot;&gt;.toc-child&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;padding-left&lt;/span&gt; 0&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-id&quot;&gt;#toc&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.toc-aside&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;none&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;width&lt;/span&gt; 13%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;fixed&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;right&lt;/span&gt; 2%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;top&lt;/span&gt; 320&lt;span class=&quot;selector-tag&quot;&gt;px&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;overflow&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;hidden&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;line-height&lt;/span&gt; 1&lt;span class=&quot;selector-class&quot;&gt;.5em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;font-size&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;em&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;color-heading&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;opacity&lt;/span&gt; &lt;span class=&quot;selector-class&quot;&gt;.6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;opacity&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;ease-out&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;strong&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;padding&lt;/span&gt; 0&lt;span class=&quot;selector-class&quot;&gt;.3em&lt;/span&gt; 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;color-font&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;amp;&lt;span class=&quot;selector-pseudo&quot;&gt;:hover&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;opacity&lt;/span&gt; &lt;span class=&quot;selector-class&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;ease-out&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;opacity&lt;/span&gt; 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;selector-tag&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt; 1&lt;span class=&quot;selector-tag&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;ease-out&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;amp;&lt;span class=&quot;selector-pseudo&quot;&gt;:hover&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;color-theme&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;selector-tag&quot;&gt;transition&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;selector-class&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;ease-out&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;5-2-文章配置&quot;&gt;&lt;a href=&quot;#5-2-文章配置&quot; class=&quot;headerlink&quot; title=&quot;5.2 文章配置&quot;&gt;&lt;/a&gt;5.2 文章配置&lt;/h4&gt;&lt;p&gt;修改scaffolds/post.md 即文章的通用模板&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title: &amp;#123;&amp;#123; title &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;date: &amp;#123;&amp;#123; date &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tags:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;categories:         #添加分类&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;toc: true           #打开文章目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;6-hexo常用操作&quot;&gt;&lt;a href=&quot;#6-hexo常用操作&quot; class=&quot;headerlink&quot; title=&quot;6. hexo常用操作&quot;&gt;&lt;/a&gt;6. hexo常用操作&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;操作&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;新建文章&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;hexo n &amp;lt;文章名&amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;等同于 hexo new&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hexo g&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;hexo g&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;等同于 hexo generate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hexo s&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;hexo s&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;等同于 hexo server&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hexo d&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;hexo d&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;等同于 hexo deploy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-为什么要用hexo，它是个啥？&quot;&gt;&lt;a href=&quot;#1-为什么要用hexo，它是个啥？&quot; class=&quot;headerlink&quot; title=&quot;1.为什么要用hexo，它是个啥？&quot;&gt;&lt;/a&gt;1.为什么要用hexo，它是个啥？&lt;/h2&gt;&lt;p&gt;   这主要源于很多
+    
+    </summary>
+    
+      <category term="工具" scheme="http://abckeep.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://abckeep.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript操作cookie无效解决方法</title>
+    <link href="http://abckeep.com/2016/05/19/javascript-cookie/"/>
+    <id>http://abckeep.com/2016/05/19/javascript-cookie/</id>
+    <published>2016-05-19T13:27:51.000Z</published>
+    <updated>2016-05-19T13:31:34.371Z</updated>
+    
+    <content type="html">&lt;p&gt;vascript操作cookie失效原因？&lt;/p&gt;
+&lt;h3 id=&quot;1-domain合法性设置问题&quot;&gt;&lt;a href=&quot;#1-domain合法性设置问题&quot; class=&quot;headerlink&quot; title=&quot;1.domain合法性设置问题&quot;&gt;&lt;/a&gt;1.domain合法性设置问题&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;domian作用：默认情况下，domain会被设置为创建该cookie的页面所在的域名，所以当给相同域名发送请求时，该cookie会一起被发送至服务器.如果需要在所有的二级域名下都记录一个cookie,则需要设置domain。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;1-1-本地测试时使用localhost&quot;&gt;&lt;a href=&quot;#1-1-本地测试时使用localhost&quot; class=&quot;headerlink&quot; title=&quot;1.1 本地测试时使用localhost&quot;&gt;&lt;/a&gt;1.1 本地测试时使用localhost&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;由于localhost不是有效的域名，domain设置成这个，操作cookie是被忽略的。
+
+解决方法：把localhost改成127.0.0.1  或者 不使用domain。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;1-2-带了端口等&quot;&gt;&lt;a href=&quot;#1-2-带了端口等&quot; class=&quot;headerlink&quot; title=&quot;1.2 带了端口等&quot;&gt;&lt;/a&gt;1.2 带了端口等&lt;/h4&gt;&lt;p&gt;注意设置domain时是不能带端口，也不需要带协议头。&lt;/p&gt;
+&lt;h3 id=&quot;2-path设置问题&quot;&gt;&lt;a href=&quot;#2-path设置问题&quot; class=&quot;headerlink&quot; title=&quot;2.path设置问题&quot;&gt;&lt;/a&gt;2.path设置问题&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;path作用：指定了请求的资源URL中只有在存在指定的路径时，才会发送Cookie消息头。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  path会导致在哪个路径下的页面设置的cookie，也只有这个路径下的页面才能操作。&lt;/p&gt;
+&lt;p&gt;  解决方法：设置成根目录 path=/   即忽略path，任何路径都可以访问。&lt;/p&gt;
+&lt;h3 id=&quot;3-expires设置&quot;&gt;&lt;a href=&quot;#3-expires设置&quot; class=&quot;headerlink&quot; title=&quot;3. expires设置&quot;&gt;&lt;/a&gt;3. expires设置&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;expires作用： cookie的过期时间&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;删除一个cookie，是将cookie的expires设置成过期的时间。但需要留意的地方删除时domain，path要和创建cookie时一样，相当于重新设置一遍只是多加了个过期时间选项。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vascript操作cookie失效原因？&lt;/p&gt;
+&lt;h3 id=&quot;1-domain合法性设置问题&quot;&gt;&lt;a href=&quot;#1-domain合法性设置问题&quot; class=&quot;headerlink&quot; title=&quot;1.domain合法性设置问题&quot;&gt;&lt;/a&gt;1.domain合法性设
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://abckeep.com/categories/javascript/"/>
+    
+    
+      <category term="cookie" scheme="http://abckeep.com/tags/cookie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ssh 密钥登陆</title>
+    <link href="http://abckeep.com/2016/05/19/sshSecretKey/"/>
+    <id>http://abckeep.com/2016/05/19/sshSecretKey/</id>
+    <published>2016-05-19T13:07:53.000Z</published>
+    <updated>2016-05-19T13:18:26.751Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;1-创建密钥文件&quot;&gt;&lt;a href=&quot;#1-创建密钥文件&quot; class=&quot;headerlink&quot; title=&quot;1.创建密钥文件&quot;&gt;&lt;/a&gt;1.创建密钥文件&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;在终端中输入以下命令后，一直敲回车，会在~/.ssh/目录下生成id_rsa 和 id_rsa.pub&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t rsa -C  &amp;apos;shenhaili1219@sina.com&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;-t 指定密钥类型，默认rsa&lt;br&gt;-C 设置注释，默认当前linux用户名&lt;br&gt;-f 设置密钥文件名，默认生成id_rsa 和 id_rsa.pub  （需要多对密钥登陆不同远程主机时需要指定名字）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;2-将公钥配置到ssh远程主机&quot;&gt;&lt;a href=&quot;#2-将公钥配置到ssh远程主机&quot; class=&quot;headerlink&quot; title=&quot;2.将公钥配置到ssh远程主机&quot;&gt;&lt;/a&gt;2.将公钥配置到ssh远程主机&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;将上面生成的公钥~/.ssh/id_rsa_work.pub的 内容复制追加到到ssh远程主机对应用户下的~/.ssh/authorized_keys文件里(没有就自己新建)&lt;/p&gt;
+&lt;p&gt;修改ssh远程主机文件权限&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;chmod 644 ~/.ssh/authorized_keys&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;为.ssh目录添加ssh_home_t标签  （SELinux安全限制）&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#查看.ssh目录是否没有ssh_home_t标签&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ls -laZ&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#drwxr-xr-x. root root unconfined_u:object_r:admin_home_t:s0 .ssh  发现没有则执行下面语句&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;restorecon -r -vv ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#drwxr-xr-x. root root unconfined_u:object_r:ssh_home_t:s0 .ssh  发现已经有了&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;配置ssh配置文件 使用vim /etc/ssh/sshd_config 做如下修改：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#启用密钥认证&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RSAAuthentication yes &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PubkeyAuthentication yes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;AuthorizedKeysFile   .ssh/authorized_keys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#禁止口令认证&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PasswordAuthentication no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意重启前应该留个持续活跃的会话（ssh超时你就蒙了），或者先不要关闭口令认证方式，防止登不上。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重启sshd服务&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;service sshd restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;##3.客户端连接测试&lt;/p&gt;
+&lt;h3 id=&quot;3-1-linux命令行形式&quot;&gt;&lt;a href=&quot;#3-1-linux命令行形式&quot; class=&quot;headerlink&quot; title=&quot;3.1 linux命令行形式&quot;&gt;&lt;/a&gt;3.1 linux命令行形式&lt;/h3&gt;&lt;p&gt;直接执行下面命令就可以连接远程主机了&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh root@你的ip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意： 默认是id_rsa 等名字   如果指定密钥名字会失败。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;3-2-windows软件连接&quot;&gt;&lt;a href=&quot;#3-2-windows软件连接&quot; class=&quot;headerlink&quot; title=&quot;3.2 windows软件连接&quot;&gt;&lt;/a&gt;3.2 windows软件连接&lt;/h3&gt;&lt;p&gt;比如putty，winscp 等软件使用的都是ppk文件（secureCRT除外它使用就是id_rsa不需要转换。）&lt;br&gt;将id_rsa转换成ppk文件需要用到&lt;a href=&quot;http://7xprhd.com1.z0.glb.clouddn.com/blog/ssh/puttygen.exe&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;puttygen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 操作步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开puttygen&lt;/li&gt;
+&lt;li&gt;菜单栏选中  Conversions &amp;gt; import key &amp;gt; 选择id_rsa文件&lt;/li&gt;
+&lt;li&gt;点击Actions框中 【Save private key】 按钮保存ppk文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这时使用putty等软件添加上ppk文件就可以了&lt;/p&gt;
+&lt;h2 id=&quot;4-简化登陆命令以及配置多个ssh账号&quot;&gt;&lt;a href=&quot;#4-简化登陆命令以及配置多个ssh账号&quot; class=&quot;headerlink&quot; title=&quot;4. 简化登陆命令以及配置多个ssh账号&quot;&gt;&lt;/a&gt;4. 简化登陆命令以及配置多个ssh账号&lt;/h2&gt;&lt;p&gt;在.ssh目录下创建config&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim ~/.ssh/config&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;做如下配置，如果多个按照下面格式多配置几次&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Host        alias #自定义别名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;HostName        hostname  #替换为你的ssh服务器ip或domain&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Port            port #ssh服务器端口，默认为22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;User            user #ssh服务器用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;IdentityFile    ~/.ssh/id_rsa #第一个步骤生成的公钥文件对应的私钥文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以后登录服务器只需要下面这样：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh alias&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-创建密钥文件&quot;&gt;&lt;a href=&quot;#1-创建密钥文件&quot; class=&quot;headerlink&quot; title=&quot;1.创建密钥文件&quot;&gt;&lt;/a&gt;1.创建密钥文件&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;在终端中输入以下命令后，一直敲回车，会在~/.ssh/目录下生成id_rsa 和 
+    
+    </summary>
+    
+      <category term="linux" scheme="http://abckeep.com/categories/linux/"/>
+    
+    
+      <category term="ssh" scheme="http://abckeep.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dns</title>
+    <link href="http://abckeep.com/2016/05/19/dns/"/>
+    <id>http://abckeep.com/2016/05/19/dns/</id>
+    <published>2016-05-19T13:02:03.000Z</published>
+    <updated>2016-05-19T13:31:56.780Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;dns: 就是域名系统，作用就是将域名解析成ip地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-dns解析大概流程&quot;&gt;&lt;a href=&quot;#1-dns解析大概流程&quot; class=&quot;headerlink&quot; title=&quot;1. dns解析大概流程&quot;&gt;&lt;/a&gt;1. dns解析大概流程&lt;/h2&gt;&lt;p&gt;下图是用户在浏览器输入域名后的解析流程：&lt;br&gt;&lt;img src=&quot;http://7xprhd.com1.z0.glb.clouddn.com/blog/dns/dns01.png&quot; alt=&quot;dns01&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查浏览器是否缓存了对应域名记录，有直接返回，没有则继续下一步（例：chrome中输入chrome://net-internals/#dns 可以看到）&lt;/li&gt;
+&lt;li&gt;检查操作系统是否缓存了域名记录，没有则继续（windows：hosts文件 ，  linux:named.conf文件）&lt;/li&gt;
+&lt;li&gt;将域名发送给网络设置DNS服务器这一项设置的ip地址（即local DNS），检查是否缓存，没有则继续&lt;/li&gt;
+&lt;li&gt;local DNS 没有查找到，直接到Root Server 域名服务器请求解析&lt;/li&gt;
+&lt;li&gt;Root Server 域名服务器 返回给local DNS 主域名服务器gTLD server地址（gTLD是国际顶级域名服务器，如.com , .cn , .org）&lt;/li&gt;
+&lt;li&gt;local DNS 向 gTLD 服务器发送请求&lt;/li&gt;
+&lt;li&gt;gTLD 服务器 返回name server 服务器地址&lt;/li&gt;
+&lt;li&gt;local DNS 向 name server 服务器发送请求（name server即权威域名服务器，即注册域名的服务商）&lt;/li&gt;
+&lt;li&gt;返回域名对应ip地址，并缓存，缓存时间由TTL值控制。&lt;/li&gt;
+&lt;li&gt;把解析结果返回给用户，根据TTL缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;2-域名解析记录&quot;&gt;&lt;a href=&quot;#2-域名解析记录&quot; class=&quot;headerlink&quot; title=&quot;2. 域名解析记录&quot;&gt;&lt;/a&gt;2. 域名解析记录&lt;/h2&gt;&lt;h3 id=&quot;2-1-A记录&quot;&gt;&lt;a href=&quot;#2-1-A记录&quot; class=&quot;headerlink&quot; title=&quot;2.1 A记录&quot;&gt;&lt;/a&gt;2.1 A记录&lt;/h3&gt;&lt;p&gt;作用：用来指定域名对应ip地址&lt;br&gt;适用范围： 适应于独立主机，有固定ip地址&lt;/p&gt;
+&lt;h3 id=&quot;2-2-CNAME-别名&quot;&gt;&lt;a href=&quot;#2-2-CNAME-别名&quot; class=&quot;headerlink&quot; title=&quot;2.2 CNAME 别名&quot;&gt;&lt;/a&gt;2.2 CNAME 别名&lt;/h3&gt;&lt;p&gt;作用：映射域名到另一个域名&lt;br&gt;适用范围： 适应于虚拟主机，变动ip地址主机（cdn加速也会用到）&lt;/p&gt;
+&lt;h3 id=&quot;2-3-URL-转发&quot;&gt;&lt;a href=&quot;#2-3-URL-转发&quot; class=&quot;headerlink&quot; title=&quot;2.3 URL 转发&quot;&gt;&lt;/a&gt;2.3 URL 转发&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;作用：重定向域名到另一个URL地址 （实际就是301转发，有利于搜索引擎seo）&lt;/li&gt;
+&lt;li&gt;适用范围： 适应于更换域名又不想抛弃老用户&lt;h3 id=&quot;2-4-MX记录&quot;&gt;&lt;a href=&quot;#2-4-MX记录&quot; class=&quot;headerlink&quot; title=&quot;2.4 MX记录&quot;&gt;&lt;/a&gt;2.4 MX记录&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;作用：邮件交换记录,用于将以该域名为结尾的电子邮件指向对应的邮件服务器以进行处理,即：给寄信者指明某个域名的邮件服务器有哪些.&lt;/li&gt;
+&lt;li&gt;适用范围： 需要设置邮箱，让邮箱能收到邮件，就需要添加MX记录&lt;h3 id=&quot;2-5-NS记录&quot;&gt;&lt;a href=&quot;#2-5-NS记录&quot; class=&quot;headerlink&quot; title=&quot;2.5 NS记录&quot;&gt;&lt;/a&gt;2.5 NS记录&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;作用： 表示域名由哪台DNS服务器进行解析&lt;/li&gt;
+&lt;li&gt;适用范围： dns加速(例如：dnspod)等需要修改此值&lt;h3 id=&quot;2-6-TXT记录&quot;&gt;&lt;a href=&quot;#2-6-TXT记录&quot; class=&quot;headerlink&quot; title=&quot;2.6 TXT记录&quot;&gt;&lt;/a&gt;2.6 TXT记录&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;作用： 目前主要用于反垃圾邮件，常用SPF格式，它向收信者表明，哪些邮件服务器是经过域名认可发送邮件的。防止垃圾邮件伪造该域名的发件人发送垃圾邮件。&lt;/p&gt;
+&lt;p&gt;典型的一般设置成： “v=spf1 a mx ~all” 表示只有这个域名的a记录和mx记录中的ip地址有权限使用这个域名发送邮件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;适用范围： 反垃圾邮件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3-域名解析记录之间的关系&quot;&gt;&lt;a href=&quot;#3-域名解析记录之间的关系&quot; class=&quot;headerlink&quot; title=&quot;3.域名解析记录之间的关系&quot;&gt;&lt;/a&gt;3.域名解析记录之间的关系&lt;/h2&gt;&lt;h3 id=&quot;3-1-ns记录、A记录、cname记录优先级&quot;&gt;&lt;a href=&quot;#3-1-ns记录、A记录、cname记录优先级&quot; class=&quot;headerlink&quot; title=&quot;3.1 ns记录、A记录、cname记录优先级&quot;&gt;&lt;/a&gt;3.1 ns记录、A记录、cname记录优先级&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;除了需要特殊用途如：邮件服务器（mx记录），更换域名（url转发），反垃圾邮件（txt记录），实际我们平常去用域名功能主要就是ns记录、A记录、cname记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; NS记录实际就是修改NameServer服务器（换dns服务器），如果修改成其他服务器，那么其他记录配置都不生效，域名解析管理的配置也就需要在更改后域名服务器里配置。A记录是直接指向ip地址，即域名就直接解析成这个ip地址。cname 指向另一个域名，即现在这个域名解析变成对另一个域名查询对应的记录。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优先级&lt;/strong&gt;：  NS记录  &amp;gt;   A记录   &amp;gt;  cname记录&lt;/p&gt;
+&lt;p&gt;很多域名服务商限制：A记录/CNAME记录/URL转发记录中，相同的指向只能存在一条，因为实际你配了很多相同的，优先级低的也不会生效。&lt;/p&gt;
+&lt;h3 id=&quot;3-2-一些思考&quot;&gt;&lt;a href=&quot;#3-2-一些思考&quot; class=&quot;headerlink&quot; title=&quot;3.2 一些思考&quot;&gt;&lt;/a&gt;3.2 一些思考&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;A记录 与 cname 区别&lt;/p&gt;
+&lt;p&gt;A记录功能上是差不多的，但是使用CNAME可以很方便的变更ip地址，因为一台服务器可以有非常多的网站，我们可以为该台服务器设置一条A记录，其他N个三级域名都是用别名指向这个A记录，那么以后变更服务器，就只要改一条A记录。&lt;br&gt;其次某个三级域名也可以通过CNAME进行CDN加速，一些防护等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;NS记录 和 CNAME 区别&lt;/p&gt;
+&lt;p&gt;功能上前面已经说了，这里说下在CDN上使用区别：&lt;br&gt;NS记录： 方便管理，生效时间慢，&lt;br&gt;CNAME记录：生效时间快，但是针对顶级域名@，麻烦&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@:代表三级域名为空，如： abckeep.com   abckeep前面没有值。 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;CNAME记录和MX记录冲突&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;原因RFC文档说明如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;递归 DNS 服务器在查询某个常规域名记录（非 CNAME 记录）时，如果在本地 cache 中已有该域名有对应的 CNAME 记录，则会开始用该别名记录来重启查询。 上文中第一次 dig 查询 MX 记录即对应于这种情况。如果直接在授权服务器上查询， 则总是能得到预期的结果。或者简单的理解为 CNAME 的优先级更高。&lt;br&gt;已经注册了 CNAME 类型的域名记录不能再注册除 DNSSEC 相关类型记录 （RRSIG， NSEC 等）之外的其他类型记录，包括（MX， A， NS 等记录）。这就是本文最开始 dig 查询 MX 记录拿不到预期结果的原因。从用户的角度来说， 对任何记录（尤其是 @ 记录，因为该记录用到 MX 的可能性非常大）的配置如果 用到了 CNAME，则需要知道该域名不可再配置 MX 等其他记录。从 DNS 服务提供 商的角度来说，需要显示的告知用户这样配置的风险，警示和教育用户。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; 由于mx记录一般使用都是根域名，所以有些dns服务根域名不会让你设置CNAME。只支持A记录。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以使用linux命令dig 测试域名解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;dns: 就是域名系统，作用就是将域名解析成ip地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-dns解析大概流程&quot;&gt;&lt;a href=&quot;#1-dns解析大概流程&quot; class=&quot;headerlink&quot; title=&quot;1. dns解析大
+    
+    </summary>
+    
+      <category term="网络" scheme="http://abckeep.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="dns" scheme="http://abckeep.com/tags/dns/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux 安装 jdk</title>
+    <link href="http://abckeep.com/2016/04/27/jdk/"/>
+    <id>http://abckeep.com/2016/04/27/jdk/</id>
+    <published>2016-04-27T06:51:09.000Z</published>
+    <updated>2016-05-19T13:26:51.716Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;1-简述&quot;&gt;&lt;a href=&quot;#1-简述&quot; class=&quot;headerlink&quot; title=&quot;1. 简述&quot;&gt;&lt;/a&gt;1. 简述&lt;/h2&gt;&lt;p&gt;在官网下载安装java前顺便复习几个概念，java分为三个体系&lt;/p&gt;
+&lt;p&gt;-&lt;strong&gt;Java SE&lt;/strong&gt;（J2SE，Java2 Platform Standard Edition，标准版）就是基于jdk和jre的,允许开发和部署在桌面、服务器、嵌入式环境和实时环境中使用的Java应用程序,为Java EE 提供基础.&lt;br&gt;-&lt;strong&gt;Java EE&lt;/strong&gt; (J2EE，Java 2 Platform, Enterprise Edition，企业版)开发和部署可移植、健壮、可伸缩且安全的服务器端 Java 应用程序.提供Web 服务、组件模型、管理和通信API，可以用来实现企业级的面向服务体系结构（service-oriented architecture，SOA）和Web 2.0 应用程序.建立于java se之上.&lt;br&gt;-&lt;strong&gt;Java ME&lt;/strong&gt; (J2ME，Java 2 Platform Micro Edition，微型版）为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境.是做嵌入式的。已经很少用&lt;/p&gt;
+&lt;p&gt;还有两个概念：&lt;br&gt;&lt;strong&gt;JDK&lt;/strong&gt;（Java Development Kit ） 是针对Java开发员的产品，是整个Java的核心，包括了Java运行环境JRE、Java工具和Java基础类库&lt;br&gt;&lt;strong&gt;JRE&lt;/strong&gt;（Java Runtime Environment）是运行JAVA程序所必须的环境的集合，包含JVM标准实现及Java核心类库&lt;br&gt;&lt;strong&gt;JVM&lt;/strong&gt;是Java Virtual Machine（Java虚拟机）的缩写，是整个java实现跨平台的最核心的部分，能够运行以Java语言写作的软件程序&lt;/p&gt;
+&lt;h2 id=&quot;2-下载&quot;&gt;&lt;a href=&quot;#2-下载&quot; class=&quot;headerlink&quot; title=&quot;2. 下载&quot;&gt;&lt;/a&gt;2. 下载&lt;/h2&gt;&lt;p&gt;这里我们安装jdk1.7：&lt;br&gt;官网下载地址： &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u55-oth-JPR&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u55-oth-JPR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;百度云盘： &lt;a href=&quot;http://pan.baidu.com/s/1mhk9a4K&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pan.baidu.com/s/1mhk9a4K&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 下载源码包到当前目录&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#解压  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar -zxvf jdk-7u55-linux-x64.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 命令解析：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  tar 是打包命令 即把多个文件或目录包成一个大文件命令，&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#   因为很多压缩命令仅对单个文件压缩  有些可以对目录压缩也是把目录里面所有文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#   分别压缩。 所以有了tar命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#   (tar.gz  代表打包后gzip压缩   tar.bz2 代表打包后bzip2压缩)   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -z  --gzip      支持gzip解压缩 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -x  --extract   解包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -v  --verbose   显示正在处理的文件列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -f  --file      指定被处理的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -c  --create    打包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#  -j  --bzip2     支持bzip2解压缩&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#移动并重命名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv jdk1.7.0_55/  /usr/local/jdk7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3-配置环境变量&quot;&gt;&lt;a href=&quot;#3-配置环境变量&quot; class=&quot;headerlink&quot; title=&quot;3. 配置环境变量&quot;&gt;&lt;/a&gt;3. 配置环境变量&lt;/h2&gt;&lt;p&gt; 编辑所有用户共用的环境配置文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vi /etc/profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在末尾追加以下内容：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;JAVA_HOME=/usr/local/jdk7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;JRE_HOME=$JAVA_HOME/jre&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export JAVA_HOME JRE_HOME PATH CLASSPATH&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;配置解释：&lt;br&gt;&lt;em&gt;JAVA_HOME&lt;/em&gt;: 指向jdk的安装目录，Eclipse/NetBeans/Tomcat等软件就是通过搜索JAVA_HOME变量来找到并使用安            装好的jdk&lt;br&gt;&lt;em&gt;JRE_HOME&lt;/em&gt;: 指向jre的目录&lt;br&gt;&lt;em&gt;CLASSPATH&lt;/em&gt; 作用是指定类搜索路径，要使用已经编写好的类，前提当然是能够找到它们了，JVM就是通过CLASSPTH来寻找类的.当然，当前目录“.”也必须加入到该变量中&lt;br&gt;&lt;em&gt;PATH&lt;/em&gt; ： 作用可以在任何目录下执行javac/java等工具，注意是追加新的配置不是覆盖。（linux中冒号分割）&lt;br&gt;export :  使所有子进程都会继承环境变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行以下命令使环境配置立即生效&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source /etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#验证  显示jdk版本则表示安装成功&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java -version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-简述&quot;&gt;&lt;a href=&quot;#1-简述&quot; class=&quot;headerlink&quot; title=&quot;1. 简述&quot;&gt;&lt;/a&gt;1. 简述&lt;/h2&gt;&lt;p&gt;在官网下载安装java前顺便复习几个概念，java分为三个体系&lt;/p&gt;
+&lt;p&gt;-&lt;strong&gt;Java SE&lt;/str
+    
+    </summary>
+    
+      <category term="linux" scheme="http://abckeep.com/categories/linux/"/>
+    
+    
+      <category term="jdk" scheme="http://abckeep.com/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终端复用软件 tmux</title>
+    <link href="http://abckeep.com/2016/04/18/tmux/"/>
+    <id>http://abckeep.com/2016/04/18/tmux/</id>
+    <published>2016-04-19T03:57:49.000Z</published>
+    <updated>2016-04-27T02:59:25.469Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;为什么要用tmux&quot;&gt;&lt;a href=&quot;#为什么要用tmux&quot; class=&quot;headerlink&quot; title=&quot;为什么要用tmux&quot;&gt;&lt;/a&gt;为什么要用tmux&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以防止ssh超时&lt;/li&gt;
+&lt;li&gt;可以分割屏幕做更多的事&lt;/li&gt;
+&lt;li&gt;可以断开ssh而程序不停止，继续运行&lt;/li&gt;
+&lt;li&gt;可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;安装tmux&quot;&gt;&lt;a href=&quot;#安装tmux&quot; class=&quot;headerlink&quot; title=&quot;安装tmux&quot;&gt;&lt;/a&gt;安装tmux&lt;/h2&gt;&lt;p&gt;centos  yum安装&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum -y install tmux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;源码编译安装&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#编译安装前需要libevent&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yum install libevent-devel.x86_64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget http://downloads.sourceforge.net/tmux/tmux-1.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget http://7xprhd.com1.z0.glb.clouddn.com/blog/tmux/tmux-1.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar zxvf tmux-1.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd tmux-1.6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./configure&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;功能使用&quot;&gt;&lt;a href=&quot;#功能使用&quot; class=&quot;headerlink&quot; title=&quot;功能使用&quot;&gt;&lt;/a&gt;功能使用&lt;/h2&gt;&lt;h3 id=&quot;层次结构&quot;&gt;&lt;a href=&quot;#层次结构&quot; class=&quot;headerlink&quot; title=&quot;层次结构&quot;&gt;&lt;/a&gt;层次结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;session：用来区分不同的工作空间，可以长时间存在，也可以临时退出再重进。可以包含多个window&lt;/li&gt;
+&lt;li&gt;window : 窗口,类似单个工作桌面，可以包含多个pane&lt;/li&gt;
+&lt;li&gt;pane :  窗格，类似桌面分屏后的单元&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xprhd.com1.z0.glb.clouddn.com/blog%2Ftmux%2Fimg%2Ftmux_jianjie.jpg&quot; alt=&quot;cmd-markdown-logo&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;系统操作&quot;&gt;&lt;a href=&quot;#系统操作&quot; class=&quot;headerlink&quot; title=&quot;系统操作&quot;&gt;&lt;/a&gt;系统操作&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;列出所有快捷键&lt;/td&gt;
+&lt;td&gt;Ctrl+b ?&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;进入复制模式&lt;/td&gt;
+&lt;td&gt;Ctrl+b [&lt;/td&gt;
+&lt;td&gt;可以配置vi和emacs模式，见配置文件设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;粘贴&lt;/td&gt;
+&lt;td&gt;Ctrl+b ]&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重新加载配置文件&lt;/td&gt;
+&lt;td&gt;source-file ~/.tmux.conf&lt;/td&gt;
+&lt;td&gt;Ctrl+b :之后执行前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;会话&quot;&gt;&lt;a href=&quot;#会话&quot; class=&quot;headerlink&quot; title=&quot;会话&quot;&gt;&lt;/a&gt;会话&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;操作&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;新建会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;tmux new -s &amp;lt;目标会话名&amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;加上d选项（tmux new -s &amp;lt;目标会话名&amp;gt; -d ）表示在后台建立&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;列出会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;tmux ls&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;连接会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;tmux a -t &amp;lt;目标会话名&amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;分离会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b d&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Tmux中在运行的程序还会继续运行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;结束会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;exit 或 [Ctrl+d] 或 tmux kill-session -t &amp;lt;目标会话名&amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;会话关闭tmux里面的程序也会关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;会话切换&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b s&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重命名当前会话&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b $&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;窗口&quot;&gt;&lt;a href=&quot;#窗口&quot; class=&quot;headerlink&quot; title=&quot;窗口&quot;&gt;&lt;/a&gt;窗口&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;操作&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;创建窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b  c&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重命名当前窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b ,&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;退出当前窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b &amp;amp;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;切换窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b w&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;切换到下一个窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b n&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;切换到上一个窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b p&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;切换至指定窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b 数字&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;在所有窗口中查找指定文本窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;窗格&quot;&gt;&lt;a href=&quot;#窗格&quot; class=&quot;headerlink&quot; title=&quot;窗格&quot;&gt;&lt;/a&gt;窗格&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;操作&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;水平分割&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b “&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;垂直分割&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b %&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;关闭当前面板&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;exit&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;将当前面板置于新窗口&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b !&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1个单元格调整当前面板大小&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b Ctrl-方向键&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;如果是alt 则是5个单元调整&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;选择面板&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;Ctrl-b 方向键&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h3&gt;&lt;p&gt;新建配置文件：  ~/.tmux.conf&lt;br&gt;修改权限： chmod 777 ~/.tmux.conf&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# bind a reload key [Ctrl-b r]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bind R source-file ~/.tmux.conf ; display-message &amp;quot;Config reloaded..&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Use vim keybindings in copy mode&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;setw -g mode-keys vi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# start selecting text typing &amp;apos;v&amp;apos; key (once you are in copy mode)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bind-key -t vi-copy v begin-selection&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# copy selected text to the system&amp;apos;s clipboard&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bind-key -t vi-copy y copy-pipe &amp;quot;reattach-to-user-namespace pbcopy&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#开启窗口的UTF-8支持&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;set-window-option -g utf8 on &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;########## 状态栏 start#########&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 颜色&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set -g status-bg black&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set -g status-fg white&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 对齐方式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set-option -g status-justify centre&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 左下角&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set-option -g status-left &amp;apos;#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set-option -g status-left-length 20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 窗口列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  setw -g automatic-rename on&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set-window-option -g window-status-format &amp;apos;#[dim]#I:#[default]#W#[fg=grey,dim]&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set-window-option -g window-status-current-format &amp;apos;#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 右下角&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set -g status-right &amp;apos;#[fg=green][#[fg=cyan]%Y-%m-%d#[fg=green]]&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;########## 状态栏 end #########&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;为什么要用tmux&quot;&gt;&lt;a href=&quot;#为什么要用tmux&quot; class=&quot;headerlink&quot; title=&quot;为什么要用tmux&quot;&gt;&lt;/a&gt;为什么要用tmux&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以防止ssh超时&lt;/li&gt;
+&lt;li&gt;可以分割屏幕做更多的事&lt;/li&gt;
+
+    
+    </summary>
+    
+      <category term="linux" scheme="http://abckeep.com/categories/linux/"/>
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>终端复用软件 tmux | 沈海立</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="为什么要用tmux
+可以防止ssh超时
+可以分割屏幕做更多的事
+可以断开ssh而程序不停止，继续运行
+可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。
+
+安装tmuxcentos  yum安装1yum -y install tmux
+源码编译安装123456789101112131415#编译安装前需要libeventyum install libevent-devel.x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终端复用软件 tmux">
+<meta property="og:url" content="http://abckeep.com/2016/04/18/tmux/index.html">
+<meta property="og:site_name" content="沈海立">
+<meta property="og:description" content="为什么要用tmux
+可以防止ssh超时
+可以分割屏幕做更多的事
+可以断开ssh而程序不停止，继续运行
+可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。
+
+安装tmuxcentos  yum安装1yum -y install tmux
+源码编译安装123456789101112131415#编译安装前需要libeventyum install libevent-devel.x">
+<meta property="og:image" content="http://7xprhd.com1.z0.glb.clouddn.com/blog%2Ftmux%2Fimg%2Ftmux_jianjie.jpg">
+<meta property="og:updated_time" content="2016-04-27T02:59:25.469Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="终端复用软件 tmux">
+<meta name="twitter:description" content="为什么要用tmux
+可以防止ssh超时
+可以分割屏幕做更多的事
+可以断开ssh而程序不停止，继续运行
+可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。
+
+安装tmuxcentos  yum安装1yum -y install tmux
+源码编译安装123456789101112131415#编译安装前需要libeventyum install libevent-devel.x">
+<meta name="twitter:image" content="http://7xprhd.com1.z0.glb.clouddn.com/blog%2Ftmux%2Fimg%2Ftmux_jianjie.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="沈海立" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">沈海立</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">在心为志，出口为言</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="abckeep.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-tmux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/18/tmux/" class="article-date">
+  <time datetime="2016-04-19T03:57:49.000Z" itemprop="datePublished">2016-04-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      终端复用软件 tmux
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要用tmux"><span class="toc-number">1.</span> <span class="toc-text">为什么要用tmux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装tmux"><span class="toc-number">2.</span> <span class="toc-text">安装tmux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能使用"><span class="toc-number">3.</span> <span class="toc-text">功能使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#层次结构"><span class="toc-number">3.1.</span> <span class="toc-text">层次结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统操作"><span class="toc-number">3.2.</span> <span class="toc-text">系统操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#会话"><span class="toc-number">3.3.</span> <span class="toc-text">会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#窗口"><span class="toc-number">3.4.</span> <span class="toc-text">窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#窗格"><span class="toc-number">3.5.</span> <span class="toc-text">窗格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-number">3.6.</span> <span class="toc-text">配置文件</span></a></li></ol></li></ol>
+</div>
+
+
+        <h2 id="为什么要用tmux"><a href="#为什么要用tmux" class="headerlink" title="为什么要用tmux"></a>为什么要用tmux</h2><ul>
+<li>可以防止ssh超时</li>
+<li>可以分割屏幕做更多的事</li>
+<li>可以断开ssh而程序不停止，继续运行</li>
+<li>可以保存工作环境（打开多个文件时的状态等），下次再连接，即使是突然断网。</li>
+</ul>
+<h2 id="安装tmux"><a href="#安装tmux" class="headerlink" title="安装tmux"></a>安装tmux</h2><p>centos  yum安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install tmux</span><br></pre></td></tr></table></figure></p>
+<p>源码编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#编译安装前需要libevent</span><br><span class="line">yum install libevent-devel.x86_64</span><br><span class="line"></span><br><span class="line">wget http://downloads.sourceforge.net/tmux/tmux-1.6.tar.gz</span><br><span class="line">wget http://7xprhd.com1.z0.glb.clouddn.com/blog/tmux/tmux-1.6.tar.gz</span><br><span class="line">tar zxvf tmux-1.6.tar.gz</span><br><span class="line"></span><br><span class="line">cd tmux-1.6</span><br><span class="line"></span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line"></span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<h2 id="功能使用"><a href="#功能使用" class="headerlink" title="功能使用"></a>功能使用</h2><h3 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h3><ul>
+<li>session：用来区分不同的工作空间，可以长时间存在，也可以临时退出再重进。可以包含多个window</li>
+<li>window : 窗口,类似单个工作桌面，可以包含多个pane</li>
+<li>pane :  窗格，类似桌面分屏后的单元</li>
+</ul>
+<p><img src="http://7xprhd.com1.z0.glb.clouddn.com/blog%2Ftmux%2Fimg%2Ftmux_jianjie.jpg" alt="cmd-markdown-logo"></p>
+<h3 id="系统操作"><a href="#系统操作" class="headerlink" title="系统操作"></a>系统操作</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>操作</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>列出所有快捷键</td>
+<td>Ctrl+b ?</td>
+<td></td>
+</tr>
+<tr>
+<td>进入复制模式</td>
+<td>Ctrl+b [</td>
+<td>可以配置vi和emacs模式，见配置文件设置</td>
+</tr>
+<tr>
+<td>粘贴</td>
+<td>Ctrl+b ]</td>
+<td></td>
+</tr>
+<tr>
+<td>重新加载配置文件</td>
+<td>source-file ~/.tmux.conf</td>
+<td>Ctrl+b :之后执行前</td>
+</tr>
+</tbody>
+</table>
+<h3 id="会话"><a href="#会话" class="headerlink" title="会话"></a>会话</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新建会话</td>
+<td style="text-align:right">tmux new -s &lt;目标会话名&gt;</td>
+<td style="text-align:center">加上d选项（tmux new -s &lt;目标会话名&gt; -d ）表示在后台建立</td>
+</tr>
+<tr>
+<td>列出会话</td>
+<td style="text-align:right">tmux ls</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>连接会话</td>
+<td style="text-align:right">tmux a -t &lt;目标会话名&gt;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>分离会话</td>
+<td style="text-align:right">Ctrl-b d</td>
+<td style="text-align:center">Tmux中在运行的程序还会继续运行</td>
+</tr>
+<tr>
+<td>结束会话</td>
+<td style="text-align:right">exit 或 [Ctrl+d] 或 tmux kill-session -t &lt;目标会话名&gt;</td>
+<td style="text-align:center">会话关闭tmux里面的程序也会关闭</td>
+</tr>
+<tr>
+<td>会话切换</td>
+<td style="text-align:right">Ctrl-b s</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>重命名当前会话</td>
+<td style="text-align:right">Ctrl-b $</td>
+</tr>
+</tbody>
+</table>
+<h3 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建窗口</td>
+<td style="text-align:right">Ctrl-b  c</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>重命名当前窗口</td>
+<td style="text-align:right">Ctrl-b ,</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>退出当前窗口</td>
+<td style="text-align:right">Ctrl-b &amp;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换窗口</td>
+<td style="text-align:right">Ctrl-b w</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换到下一个窗口</td>
+<td style="text-align:right">Ctrl-b n</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换到上一个窗口</td>
+<td style="text-align:right">Ctrl-b p</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>切换至指定窗口</td>
+<td style="text-align:right">Ctrl-b 数字</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>在所有窗口中查找指定文本窗口</td>
+<td style="text-align:right">Ctrl-b f</td>
+</tr>
+</tbody>
+</table>
+<h3 id="窗格"><a href="#窗格" class="headerlink" title="窗格"></a>窗格</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平分割</td>
+<td style="text-align:right">Ctrl-b “</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>垂直分割</td>
+<td style="text-align:right">Ctrl-b %</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>关闭当前面板</td>
+<td style="text-align:right">exit</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>将当前面板置于新窗口</td>
+<td style="text-align:right">Ctrl-b !</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>1个单元格调整当前面板大小</td>
+<td style="text-align:right">Ctrl-b Ctrl-方向键</td>
+<td style="text-align:center">如果是alt 则是5个单元调整</td>
+</tr>
+<tr>
+<td>选择面板</td>
+<td style="text-align:right">Ctrl-b 方向键</td>
+</tr>
+</tbody>
+</table>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>新建配置文件：  ~/.tmux.conf<br>修改权限： chmod 777 ~/.tmux.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># bind a reload key [Ctrl-b r]</span><br><span class="line">bind R source-file ~/.tmux.conf ; display-message &quot;Config reloaded..&quot;</span><br><span class="line"></span><br><span class="line"># Use vim keybindings in copy mode</span><br><span class="line">setw -g mode-keys vi</span><br><span class="line"># start selecting text typing &apos;v&apos; key (once you are in copy mode)</span><br><span class="line">bind-key -t vi-copy v begin-selection</span><br><span class="line"># copy selected text to the system&apos;s clipboard</span><br><span class="line">bind-key -t vi-copy y copy-pipe &quot;reattach-to-user-namespace pbcopy&quot;</span><br><span class="line"></span><br><span class="line">#开启窗口的UTF-8支持</span><br><span class="line">set-window-option -g utf8 on </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">########## 状态栏 start#########</span><br><span class="line"># 颜色</span><br><span class="line">  set -g status-bg black</span><br><span class="line">  set -g status-fg white</span><br><span class="line"># 对齐方式</span><br><span class="line">  set-option -g status-justify centre</span><br><span class="line"># 左下角</span><br><span class="line">  set-option -g status-left &apos;#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]&apos;</span><br><span class="line">  set-option -g status-left-length 20</span><br><span class="line"># 窗口列表</span><br><span class="line">  setw -g automatic-rename on</span><br><span class="line">  set-window-option -g window-status-format &apos;#[dim]#I:#[default]#W#[fg=grey,dim]&apos;</span><br><span class="line">  set-window-option -g window-status-current-format &apos;#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]&apos;</span><br><span class="line"># 右下角</span><br><span class="line">  set -g status-right &apos;#[fg=green][#[fg=cyan]%Y-%m-%d#[fg=green]]&apos;</span><br><span class="line">########## 状态栏 end #########</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <footer class="article-footer">
+      
+        <a data-url="http://abckeep.com/2016/04/18/tmux/" data-id="cioedtjlm000bjf6mvusygiet" class="article-share-link" data-share="baidu" data-title="终端复用软件 tmux">分享到</a>
+      
+
+      
+        <a href="http://abckeep.com/2016/04/18/tmux/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/27/jdk/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          linux 安装 jdk
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div class="ds-thread" data-thread-key="post-tmux" data-title="终端复用软件 tmux" data-url="http://abckeep.com/2016/04/18/tmux/"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+
+  </section>
+
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">dns</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/19/hexo/">hexo搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/javascript-cookie/">javascript操作cookie无效解决方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/sshSecretKey/">ssh 密钥登陆</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/dns/">dns</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/27/jdk/">linux 安装 jdk</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 shenhaili<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?595d3af374d802b7283497ebfc95b742";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"abckeep"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>
+  function SetShareData(cmd, config) {
+    if (shareDataTitle && shareDataUrl) {
+      config.bdText = shareDataTitle;
+      config.bdUrl = shareDataUrl;
+    }
+    return config;
+  }
+  window._bd_share_config={
+    "common":{onBeforeClick: SetShareData},
+    "share":{"bdCustomStyle":"/css/bdshare.css"}
+  };
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>
